@@ -1,9 +1,9 @@
-alert("this is version31");
+alert("this is version32");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
-canvas.setAttribute("width", document.body.scrollWidth );
-canvas.setAttribute("height", document.body.scrollHeight);
+canvas.setAttribute("width", screen.width );
+canvas.setAttribute("height", screen.height);
 var drawing = false;
 var oldPos;
 context.strokeStyle = "#000000";
