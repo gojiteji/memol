@@ -28,6 +28,7 @@ function getPosT(event) {
 
 /* event listebers */
 canvas.addEventListener("mousemove"||"touchmove", function (event) {
+    alert("touch moving");
     var pos = getPosT(event);
     if (drawing) {
         var pos = getPosT(event);
@@ -42,7 +43,6 @@ canvas.addEventListener("mousemove"||"touchmove", function (event) {
 
 // tap start
 canvas.addEventListener("mousedown"||"touchstart", function (event) {
-    alert("touch started");
     drawing = true;
     oldPos = getPosT(event);
 }, false);
