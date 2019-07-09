@@ -1,4 +1,4 @@
-alert("this is version 19");
+alert("this is version 20");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -39,11 +39,11 @@ function getPosM(event) {
     return { x: mouseX, y: mouseY };
 }
 
-function getPosT(event){
+function getPosT(eventname){
     var touch = eventname.changedTouches[0];
-    var x = touch.pageX;
-    var y = touch.pageY;
-    return { x: x, y: y };
+    var xpos = touch.pageX;
+    var ypos = touch.pageY;
+    return { x: xpos, y: ypos };
 }
 
 // tap start
