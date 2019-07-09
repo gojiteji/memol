@@ -1,4 +1,4 @@
-alert("this is version 11");
+alert("this is version 12");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -47,8 +47,8 @@ canvas.addEventListener("touchstart", function (event) {
 
 /* event listebers */
 canvas.addEventListener("mousemove", function (event) {
-    updateEventname('move');
     var pos = getPosT(event);
+    updateEventname(pos);
     if (drawing) {
         var pos = getPosT(event);
         context.beginPath();
