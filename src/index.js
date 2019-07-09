@@ -1,4 +1,4 @@
-alert("this is version 28");
+alert("this is version 29");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -11,7 +11,8 @@ context.lineWidth = 2;
 context.lineJoin = "round";
 context.lineCap = "round";
 
-
+alert(document.body.scrollHeight)
+alert(document.body.scrollWidth)
 
 
 /* define function */
