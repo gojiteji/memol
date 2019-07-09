@@ -1,4 +1,4 @@
-alert("this is version 15");
+alert("this is version 16");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
