@@ -1,9 +1,9 @@
-alert("this is version 26");
+alert("this is version 28");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
-canvas.setAttribute("width", screen.width);
-canvas.setAttribute("height", screen.height);
+canvas.setAttribute("width", document.body.scrollHeight);
+canvas.setAttribute("height", document.body.scrollWidth );
 var drawing = false;
 var oldPos;
 context.strokeStyle = "#000000";
@@ -31,8 +31,8 @@ function getPosM(event) {
 
 function getPosT(eventname){
     var touch = eventname.changedTouches[0];
-    var xpos = touch.pageX - canvas.offsetLeft-4;
-    var ypos = touch.pageY - canvas.offsetTop-4;
+    var xpos = touch.pageX - canvas.offsetLeft-2;
+    var ypos = touch.pageY - canvas.offsetTop-2;
     return { x: xpos, y: ypos };
 }
 
