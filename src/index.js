@@ -1,4 +1,4 @@
-alert("this is version 18");
+alert("this is version 19");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -73,7 +73,7 @@ canvas.addEventListener("mousemove", function (event) {
 canvas.addEventListener("touchmove", function (event) {
     event.preventDefault();
     var pos = getPosT(event);
-    updateEventname2(pos);
+    updateEventname1("moving");
     if (drawing) {
         var pos = getPosT(event);
         context.beginPath();
