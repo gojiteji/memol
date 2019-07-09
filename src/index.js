@@ -40,13 +40,13 @@ canvas.addEventListener("mousemove"||"touchmove", function (event) {
 }, false);
 
 // tap start
-canvas.addEventListener("mousedown"||"touchdown", function (event) {
-    drawing = true;
+canvas.addEventListener("mousedown"||"touchstart", function (event) {
+    drawing = true;e
     oldPos = getPosT(event);
 }, false);
 
 // tap fin
-canvas.addEventListener("mouseup"||"touchup", function () {
+canvas.addEventListener("mouseup"||"touchend", function () {
     drawing = false;
 }, false);
 
