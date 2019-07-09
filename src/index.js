@@ -26,6 +26,12 @@ function getPosT(event) {
     return { x: mouseX, y: mouseY };
 }
 
+// tap start
+canvas.addEventListener("mousedown"||"touchstart", function (event) {
+    drawing = true;
+    oldPos = getPosT(event);
+}, false);
+
 /* event listebers */
 canvas.addEventListener("mousemove"||"touchmove", function (event) {
     alert("touch moving");
@@ -41,11 +47,6 @@ canvas.addEventListener("mousemove"||"touchmove", function (event) {
     }
 }, false);
 
-// tap start
-canvas.addEventListener("mousedown"||"touchstart", function (event) {
-    drawing = true;
-    oldPos = getPosT(event);
-}, false);
 
 // tap fin
 canvas.addEventListener("mouseup"||"touchend", function () {
