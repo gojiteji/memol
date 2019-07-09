@@ -91,7 +91,7 @@ Pressure.set( '#myCanvas', {
       endDeepPress: function(){
       },
       change: function(force, event){
-        context.lineWidth=2**(force-1);
+        context.lineWidth=2**(force-0.7);
       },
       unsupported: function(){
       }
