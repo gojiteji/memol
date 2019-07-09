@@ -1,4 +1,4 @@
-alert("this is version 3");
+alert("this is version 4");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -42,7 +42,8 @@ canvas.addEventListener("mousemove"||"touchmove", function (event) {
 
 // tap start
 canvas.addEventListener("mousedown"||"touchstart", function (event) {
-    drawing = true;e
+    alert("touch started");
+    drawing = true;
     oldPos = getPosT(event);
 }, false);
 
