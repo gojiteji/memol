@@ -1,4 +1,4 @@
-alert("this is version 22");
+alert("this is version 23");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -31,8 +31,8 @@ function getPosM(event) {
 
 function getPosT(eventname){
     var touch = eventname.changedTouches[0];
-    var xpos = touch.pageX - canvas.offsetLeft;
-    var ypos = touch.pageY - canvas.offsetTop;
+    var xpos = touch.pageX - canvas.offsetLeft-6;
+    var ypos = touch.pageY - canvas.offsetTop-6;
     return { x: xpos, y: ypos };
 }
 
