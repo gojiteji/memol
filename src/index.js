@@ -1,4 +1,4 @@
-alert("this is version 12");
+alert("this is version 13");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -15,7 +15,7 @@ context.lineCap = "round";
 
 var el_eventname = document.getElementById('eventname');
 var updateEventname = function(eventname) {
-    el_eventname.innerHTML = eventname;
+    el_eventname.innerHTML = eventname.x;
   };
 
 /* define function */
