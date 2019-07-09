@@ -1,4 +1,4 @@
-alert("this is version 20");
+alert("this is version 21");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -13,16 +13,6 @@ context.lineCap = "round";
 
 
 
-var el_eventname = document.getElementById('eventname');
-var updateEventname1 = function(eventname) {
-    el_eventname.innerHTML = eventname.x;
-  };
-var el_eventname = document.getElementById('eventname');
-var updateEventname2 = function(eventname) {
-    var touch = eventname.changedTouches[0];
-    var x = touch.pageX;
-    el_eventname.innerHTML = x;
-   };
 
 /* define function */
 function scrollX() {
@@ -59,7 +49,6 @@ canvas.addEventListener("touchstart", function (event) {
 /* event listebers */
 canvas.addEventListener("mousemove", function (event) {
     var pos = getPosM(event);
-    updateEventname1(pos);
     if (drawing) {
         var pos = getPosM(event);
         context.beginPath();
@@ -73,7 +62,6 @@ canvas.addEventListener("mousemove", function (event) {
 canvas.addEventListener("touchmove", function (event) {
     event.preventDefault();
     var pos = getPosT(event);
-    updateEventname1("moving");
     if (drawing) {
         var pos = getPosT(event);
         context.beginPath();
@@ -87,10 +75,8 @@ canvas.addEventListener("touchmove", function (event) {
 
 // tap fin
 canvas.addEventListener("mouseup", function () {
-    updateEventname('end');
     drawing = false;
 }, false);
 canvas.addEventListener("touchend", function () {
-    updateEventname('end');
     drawing = false;
 }, false);
