@@ -1,4 +1,4 @@
-alert("this is version 13");
+alert("this is version 14");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -34,11 +34,6 @@ function getPosT(event) {
 }
 
 // tap start
-canvas.addEventListener("mousedown", function (event) {
-    updateEventname('start');
-    drawing = true;
-    oldPos = getPosT(event);
-}, false);
 canvas.addEventListener("touchstart", function (event) {
     updateEventname('start');
     drawing = true;
@@ -46,19 +41,6 @@ canvas.addEventListener("touchstart", function (event) {
 }, false);
 
 /* event listebers */
-canvas.addEventListener("mousemove", function (event) {
-    var pos = getPosT(event);
-    updateEventname(pos);
-    if (drawing) {
-        var pos = getPosT(event);
-        context.beginPath();
-        context.moveTo(oldPos.x, oldPos.y);
-        context.lineTo(pos.x, pos.y);
-        context.stroke();
-        context.closePath();
-        oldPos = pos;
-    }
-}, false);
 canvas.addEventListener("touchmove", function (event) {
     event.preventDefault();
     var pos = getPosT(event);
@@ -75,10 +57,6 @@ canvas.addEventListener("touchmove", function (event) {
 },  {passive: false});
 
 // tap fin
-canvas.addEventListener("mouseup", function () {
-    updateEventname('end');
-    drawing = false;
-}, false);
 canvas.addEventListener("touchend", function () {
     updateEventname('end');
     drawing = false;
