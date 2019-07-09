@@ -1,4 +1,4 @@
-# paper
+# memol
 Extremely Simplified Paper for Pencil & Safri.
 
 ## how to use
