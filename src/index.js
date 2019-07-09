@@ -1,4 +1,4 @@
-alert("this is version 17");
+alert("this is version 18");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -19,7 +19,7 @@ var updateEventname1 = function(eventname) {
   };
 var el_eventname = document.getElementById('eventname');
 var updateEventname2 = function(eventname) {
-    var touch = eventname.touches[0];
+    var touch = eventname.changedTouches[0];
     var x = touch.pageX;
     el_eventname.innerHTML = x;
    };
@@ -40,7 +40,7 @@ function getPosM(event) {
 }
 
 function getPosT(event){
-    var touch = eventname.touches[0];
+    var touch = eventname.changedTouches[0];
     var x = touch.pageX;
     var y = touch.pageY;
     return { x: x, y: y };
