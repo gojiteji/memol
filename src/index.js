@@ -1,4 +1,4 @@
-alert("this is version 7");
+alert("this is version 8");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -10,6 +10,13 @@ context.strokeStyle = "#000000";
 context.lineWidth = 5;
 context.lineJoin = "round";
 context.lineCap = "round";
+
+
+
+var el_eventname = document.getElementById('eventname');
+var updateEventname = function(eventname) {
+    el_eventname.innerHTML = eventname;
+  };
 
 /* define function */
 function scrollX() {
@@ -27,14 +34,15 @@ function getPosT(event) {
 }
 
 // tap start
-canvas.addEventListener("touchstart", function (event) {
+canvas.addEventListener("touchstart"||"mousedown", function (event) {
+    updateEventname('touchmove');
     drawing = true;
     oldPos = getPosT(event);
 }, false);
 
 /* event listebers */
-canvas.addEventListener("touchmove", function (event) {
-    alert("touch moving");
+canvas.addEventListener("touchmove"||"mousemove", function (event) {
+    updateEventname('touchmove');
     var pos = getPosT(event);
     if (drawing) {
         var pos = getPosT(event);
@@ -49,7 +57,8 @@ canvas.addEventListener("touchmove", function (event) {
 
 
 // tap fin
-canvas.addEventListener("touchend", function () {
+canvas.addEventListener("touchend"||"mouseup", function () {
+    updateEventname('touchmove');
     drawing = false;
 }, false);
 
