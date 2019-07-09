@@ -1,4 +1,4 @@
-alert("this is version 16");
+alert("this is version 17");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -14,9 +14,15 @@ context.lineCap = "round";
 
 
 var el_eventname = document.getElementById('eventname');
-var updateEventname = function(eventname) {
+var updateEventname1 = function(eventname) {
     el_eventname.innerHTML = eventname.x;
   };
+var el_eventname = document.getElementById('eventname');
+var updateEventname2 = function(eventname) {
+    var touch = eventname.touches[0];
+    var x = touch.pageX;
+    el_eventname.innerHTML = x;
+   };
 
 /* define function */
 function scrollX() {
@@ -27,30 +33,35 @@ function scrollY() {
     return document.documentElement.scrollTop || document.body.scrollTop;
 }
 
-function getPosT(event) {
+function getPosM(event) {
     var mouseX = event.clientX ;
     var mouseY = event.clientY;
     return { x: mouseX, y: mouseY };
 }
 
+function getPosT(event){
+    var touch = eventname.touches[0];
+    var x = touch.pageX;
+    var y = touch.pageY;
+    return { x: x, y: y };
+}
+
 // tap start
 canvas.addEventListener("mousedown", function (event) {
-    updateEventname('start');
     drawing = true;
-    oldPos = getPosT(event);
+    oldPos = getPosM(event);
 }, false);
 canvas.addEventListener("touchstart", function (event) {
-    updateEventname('start');
     drawing = true;
     oldPos = getPosT(event);
 }, false);
 
 /* event listebers */
 canvas.addEventListener("mousemove", function (event) {
-    var pos = getPosT(event);
-    updateEventname(pos);
+    var pos = getPosM(event);
+    updateEventname1(pos);
     if (drawing) {
-        var pos = getPosT(event);
+        var pos = getPosM(event);
         context.beginPath();
         context.moveTo(oldPos.x, oldPos.y);
         context.lineTo(pos.x, pos.y);
@@ -60,9 +71,9 @@ canvas.addEventListener("mousemove", function (event) {
     }
 }, false);
 canvas.addEventListener("touchmove", function (event) {
-    //event.preventDefault();
+    event.preventDefault();
     var pos = getPosT(event);
-    updateEventname(pos);
+    updateEventname2(pos);
     if (drawing) {
         var pos = getPosT(event);
         context.beginPath();
