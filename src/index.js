@@ -1,4 +1,4 @@
-alert("this is version 6");
+alert("this is version 7");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -27,13 +27,13 @@ function getPosT(event) {
 }
 
 // tap start
-canvas.addEventListener("mousedown"||"touchstart", function (event) {
+canvas.addEventListener("touchstart", function (event) {
     drawing = true;
     oldPos = getPosT(event);
 }, false);
 
 /* event listebers */
-canvas.addEventListener("mousemove"||"touchmove", function (event) {
+canvas.addEventListener("touchmove", function (event) {
     alert("touch moving");
     var pos = getPosT(event);
     if (drawing) {
@@ -49,7 +49,7 @@ canvas.addEventListener("mousemove"||"touchmove", function (event) {
 
 
 // tap fin
-canvas.addEventListener("mouseup"||"touchend", function () {
+canvas.addEventListener("touchend", function () {
     drawing = false;
 }, false);
 
