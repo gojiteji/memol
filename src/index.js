@@ -1,4 +1,3 @@
-alert("this is version33");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -79,3 +78,21 @@ canvas.addEventListener("mouseup", function () {
 canvas.addEventListener("touchend", function () {
     drawing = false;
 }, false);
+
+
+/* Pressurejs */
+Pressure.set( '#myCanvas', {
+    start: function(event){
+      },
+      end: function(){
+      },
+      startDeepPress: function(event){
+      },
+      endDeepPress: function(){
+      },
+      change: function(force, event){
+        context.lineWidth=2**(force-1);
+      },
+      unsupported: function(){
+      }
+    });
