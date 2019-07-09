@@ -1,3 +1,4 @@
+alert("this is version 3");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
