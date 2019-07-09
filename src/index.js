@@ -1,9 +1,9 @@
-alert("this is version 30");
+alert("this is version31");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
-canvas.setAttribute("width", screen.height);
-canvas.setAttribute("height", screen.width );
+canvas.setAttribute("width", document.body.scrollWidth );
+canvas.setAttribute("height", document.body.scrollHeight);
 var drawing = false;
 var oldPos;
 context.strokeStyle = "#000000";
@@ -11,8 +11,6 @@ context.lineWidth = 2;
 context.lineJoin = "round";
 context.lineCap = "round";
 
-alert(document.body.scrollHeight)
-alert(document.body.scrollWidth)
 
 
 /* define function */
