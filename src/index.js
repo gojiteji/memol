@@ -1,4 +1,4 @@
-alert("this is version 10");
+alert("this is version 11");
 /* define valuable */
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext('2d');
@@ -60,9 +60,9 @@ canvas.addEventListener("mousemove", function (event) {
     }
 }, false);
 canvas.addEventListener("touchmove", function (event) {
-    updateEventname('move');
     event.preventDefault();
     var pos = getPosT(event);
+    updateEventname(pos);
     if (drawing) {
         var pos = getPosT(event);
         context.beginPath();
