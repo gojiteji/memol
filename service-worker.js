@@ -8,7 +8,14 @@ const urlsToCache = [
   './src/index.js',
   './img/icon-256.png',
   './img/icon-192.png',
-  'https://cdnjs.cloudflare.com/ajax/libs/pressure/2.1.2/pressure.min.js'
+  'https://cdnjs.cloudflare.com/ajax/libs/pressure/2.1.2/pressure.min.js',
+  './img/android-icon-36x36.png',
+  './img/android-icon-48x98.png',
+  './img/android-icon-72x72.png',
+  './img/android-icon-96x96.png',
+  './img/android-icon-144x144.png',
+  './img/android-icon-192x192.png',
+  './img/android-icon-256x356.png'
 
 ];
 
