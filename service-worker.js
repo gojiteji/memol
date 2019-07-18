@@ -14,8 +14,7 @@ const urlsToCache = [
   './img/android-icon-72x72.png',
   './img/android-icon-96x96.png',
   './img/android-icon-144x144.png',
-  './img/android-icon-192x192.png',
-  './img/android-icon-256x256.png'
+  './img/android-icon-192x192.png'
 
 ];
 
