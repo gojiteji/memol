@@ -2,7 +2,7 @@
 Extremely Simplified Paper for Pencil & Safri.
 
 ## how to use
-1. Access to https://gojiteji.github.io/paper.
+1. Access to https://memol.gojiteji.com.
 1. Write as you want.
 
 Easy to acces by using "Add to Home Screeen".
