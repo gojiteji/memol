@@ -1,6 +1,6 @@
 {
     "name": "memol",
-    "short_name": "PWA",
+    "short_name": "memol",
     "background_color": "#ffffff",
     "icons": [{
         "src": "./icon-256.png",
