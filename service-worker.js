@@ -7,7 +7,8 @@ const urlsToCache = [
   './src/index.css',
   './src/index.js',
   './img/icon-256.png',
-  './img/icon-192.png'
+  './img/icon-192.png',
+  'https://cdnjs.cloudflare.com/ajax/libs/pressure/2.1.2/pressure.min.js'
 
 ];
 
