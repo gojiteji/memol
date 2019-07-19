@@ -84,10 +84,7 @@ canvas.addEventListener("mouseup", function () {
     drawing = false;
 }, false);
 canvas.addEventListener("touchend", function (event) {
-    if (event.touches[0].touchType == "direct") {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    alert("cleard")
-    }
+    alert(event)
     drawing = false;
 }, false);
 
