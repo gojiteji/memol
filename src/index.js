@@ -132,6 +132,7 @@ $(function () {
     if (event.touches[0].touchType == "direct") {
     if (direction == 'right'){
      //delete
+     alert("swipe")
      context.clearRect(0, 0, canvas.width, canvas.height);
     }
 }
