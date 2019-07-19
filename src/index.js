@@ -38,6 +38,8 @@ function getPosT(eventname){
 canvas.addEventListener("mousedown", function (event) {
     drawing = true;
     oldPos = getPosM(event);
+    alert(event.touches[0].touchType);
+
 }, false);
 canvas.addEventListener("touchstart", function (event) {
     drawing = true;
