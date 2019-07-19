@@ -42,9 +42,13 @@ canvas.addEventListener("mousedown", function (event) {
 
 }, false);
 canvas.addEventListener("touchstart", function (event) {
-    drawing = true;
     oldPos = getPosT(event);
-    alert(event.touches[0].touchType);
+    if(event.touches[0].touchType=="stylus"){
+        drawing = true;
+    }
+    else if(event.touches[0].touchType=="direct"){
+        drawing=false;
+    }
 
 }, false);
 
