@@ -115,6 +115,7 @@ $(function () {
     function onTouchStart(event) {
         position = getPosition(event);
         direction = ''; //一度リセットする
+        alert("touch start")
     }
 
     //スワイプの方向（left／right）を取得
