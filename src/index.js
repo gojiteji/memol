@@ -78,7 +78,7 @@ canvas.addEventListener("touchmove", function (event) {
         context.closePath();
         
         }else{
-            posy=pos.y-oldPos.y;
+            posy=posy+pos.x-oldPos.x;
         }
         oldPos = pos;
 }, { passive: false });
