@@ -5,6 +5,7 @@ canvas.setAttribute("width", window.innerWidth);
 canvas.setAttribute("height", window.innerHeight);
 var drawing = false;
 var oldPos;
+var posy=0;
 context.strokeStyle = "#000000";
 context.lineWidth = 2;
 context.lineJoin = "round";
@@ -75,6 +76,9 @@ canvas.addEventListener("touchmove", function (event) {
         context.lineTo(pos.x, pos.y);
         context.stroke();
         context.closePath();
+        
+        }else{
+            posy=pos.y-oldPos.y;
         }
         oldPos = pos;
 }, { passive: false });
@@ -83,9 +87,12 @@ canvas.addEventListener("touchmove", function (event) {
 canvas.addEventListener("mouseup", function () {
     drawing = false;
 }, false);
-canvas.addEventListener("touchend", function (event) {
-    alert(event);
-    alert(event.touches[0].touchType);
+canvas.addEventListener("touchend", function () {
+    alert(posy)
+    if(posy>=70){
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    posy=0;
     drawing = false;
 }, false);
 
