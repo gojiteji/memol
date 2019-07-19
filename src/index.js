@@ -84,7 +84,7 @@ canvas.addEventListener("mouseup", function () {
     drawing = false;
 }, false);
 canvas.addEventListener("touchend", function (event) {
-    alert(eventevent.touches[0].touchType)
+    alert(eventevent.touches[0].touchType);
     drawing = false;
 }, false);
 
