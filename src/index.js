@@ -67,22 +67,26 @@ canvas.addEventListener("mousemove", function (event) {
 canvas.addEventListener("touchmove", function (event) {
     event.preventDefault();
     var pos = getPosT(event);
-    if (drawing) {
+
         var pos = getPosT(event);
+        if (drawing) {
         context.beginPath();
         context.moveTo(oldPos.x, oldPos.y);
         context.lineTo(pos.x, pos.y);
         context.stroke();
         context.closePath();
+        }
         oldPos = pos;
-    }
 }, { passive: false });
 
 // tap fin
 canvas.addEventListener("mouseup", function () {
     drawing = false;
 }, false);
-canvas.addEventListener("touchend", function () {
+canvas.addEventListener("touchend", function (event) {
+    if (event.touches[0].touchType == "direct") {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    }
     drawing = false;
 }, false);
 
@@ -104,43 +108,4 @@ Pressure.set('#myCanvas', {
     }
 });
 
-//get finger swipe
-$(function () {
-    $('#main').on('touchstart', onTouchStart); //指が触れたか検知
-    $('#main').on('touchmove', onTouchMove); //指が動いたか検知
-    $('#main').on('touchend', onTouchEnd); //指が離れたか検知
-    var direction, position;
 
-    //スワイプ開始時の横方向の座標を格納
-    function onTouchStart(event) {
-        position = getPosition(event);
-        direction = ''; //一度リセットする
-        alert("touch start")
-    }
-
-    //スワイプの方向（left／right）を取得
-    function onTouchMove(event) {
-        if (event.touches[0].touchType == "direct") {
-        if (position - getPosition(event) > 70) { // 70px以上移動しなければスワイプと判断しない
-            direction = 'left'; //左と検知
-        } else if (position - getPosition(event) < -70) {  // 70px以上移動しなければスワイプと判断しない
-            direction = 'right'; //右と検知
-        }
-    }
-    }
-
-  function onTouchEnd(event) {
-    if (event.touches[0].touchType == "direct") {
-    if (direction == 'right'){
-     //delete
-     alert("swipe")
-     context.clearRect(0, 0, canvas.width, canvas.height);
-    }
-}
-  }
-
-  //横方向の座標を取得
-  function getPosition(event) {
-    return event.originalEvent.touches[0].pageX;
-  }
-});
