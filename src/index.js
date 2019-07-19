@@ -98,8 +98,7 @@ Pressure.set( '#myCanvas', {
     });
 
 
-    var body = document.getElementByTagName('body');
-body.addEventListener('touchstart', function(evt){
+canvas.addEventListener('touchstart', function(evt){
     // should be either "stylus" or "direct"
     alert(evt.touches[0].touchType);
 });
