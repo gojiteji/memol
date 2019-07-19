@@ -88,8 +88,7 @@ canvas.addEventListener("mouseup", function () {
     drawing = false;
 }, false);
 canvas.addEventListener("touchend", function () {
-    alert(posy)
-    if(posy>=70){
+    if(posy>=canvas.width*0.4){
         context.clearRect(0, 0, canvas.width, canvas.height);
     }
     posy=0;
