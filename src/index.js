@@ -42,6 +42,8 @@ canvas.addEventListener("mousedown", function (event) {
 canvas.addEventListener("touchstart", function (event) {
     drawing = true;
     oldPos = getPosT(event);
+    alert(event.touches[0].touchType);
+
 }, false);
 
 /* event listebers */
@@ -98,7 +100,3 @@ Pressure.set( '#myCanvas', {
     });
 
 
-canvas.addEventListener('touchstart', function(evt){
-    // should be either "stylus" or "direct"
-    alert(evt.touches[0].touchType);
-});
