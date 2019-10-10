@@ -23,3 +23,7 @@ Easy to acces by using "Add to Home Screeen".
 - Insert Image
 
   Comming soon...
+
+- sharable link
+
+  Comming soon...
