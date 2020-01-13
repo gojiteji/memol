@@ -10,11 +10,11 @@ Easy to acces by using "Add to Home Screeen".
 ## how to ...
 - Erase all
 
-  Reload your blowser.
+  Slide screen from left to right (like turning a page).
 
 - Generate pdf
 
-  Push share button in Safari and select Create PDF.
+  Screenshot your iPad and use iOS default function.
 
 - Share
 
